@@ -1,4 +1,6 @@
+import Header from '@/app/header';
 import { notFound } from 'next/navigation';
+import '../../page.css'
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -22,8 +24,16 @@ export default async function PastePage({ params }) {
   }
 
   return (
-    <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-      {data.content}
-    </pre>
+    <div className='root'>
+      <Header />
+
+      <div className='content-wrapper'>
+        <pre>
+          {data.content}
+        </pre>
+
+        <a href={process.env.NEXT_PUBLIC_BASE_URL ?? '/'} style={{all: "unset", alignSelf: "center"}} className='pointer'><button>Paste and Share Text</button></a>
+      </div>
+    </div>
   );
 }
