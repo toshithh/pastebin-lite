@@ -9,7 +9,7 @@ export default async function PastePage({ params }) {
   const { id } = await params;
 
   const res = await fetch(
-    `${process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ''}/api/pastes/${id}`,
+    `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ''}/api/pastes/${id}`,
     { cache: 'no-store' }
   );
 
@@ -32,7 +32,7 @@ export default async function PastePage({ params }) {
           {data.content}
         </pre>
 
-        <a href={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? '/'} style={{all: "unset", alignSelf: "center"}} className='pointer'><button>Paste and Share Text</button></a>
+        <a href={`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` ?? '/'} style={{all: "unset", alignSelf: "center"}} className='pointer'><button>Paste and Share Text</button></a>
       </div>
     </div>
   );
