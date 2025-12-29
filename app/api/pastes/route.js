@@ -2,7 +2,6 @@ import kv from '@/lib/kv';
 import { nanoid } from 'nanoid';
 import { nowMs } from '@/lib/time';
 
-export const runtime = 'nodejs';
 
 export async function POST(request) {
   let body;
