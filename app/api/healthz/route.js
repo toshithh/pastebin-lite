@@ -1,5 +1,7 @@
 import kv from '@/lib/kv';
 
+export const runtime = 'nodejs';
+
 export async function GET() {
   try {
     await kv.ping();

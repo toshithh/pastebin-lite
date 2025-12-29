@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 export default async function PastePage({ params }) {
   const paste = await fetchPasteOr404(
     { headers: new Headers() },
-    params.id
+    (await params).id
   );
 
   if (!paste) notFound();
