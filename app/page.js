@@ -6,8 +6,8 @@ import Header from './header';
 
 export default function Home() {
   const [content, setContent] = useState('');
-  const [ttl, setTtl] = useState('');
-  const [maxViews, setMaxViews] = useState('');
+  const [ttl, setTtl] = useState(500);
+  const [maxViews, setMaxViews] = useState(10);
   const [url, setUrl] = useState(null);
 
   async function submit() {
