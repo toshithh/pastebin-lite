@@ -80,6 +80,6 @@ pre {
 
 @media (prefers-color-scheme: light) {
   input, textarea, pre {
-    background-color: lightblue;
+    background-color: lightgray;
   }
 }
