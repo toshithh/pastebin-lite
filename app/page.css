@@ -77,3 +77,9 @@ pre {
   width: 100%;
   height: max-content;
 }
+
+@media (prefers-color-scheme: light) {
+  input, textarea, pre {
+    background-color: lightblue;
+  }
+}

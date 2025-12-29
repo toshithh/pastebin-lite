@@ -47,6 +47,6 @@ export async function POST(request) {
 
   return Response.json({
     id,
-    url: `${process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : ''}/p/${id}`
+    url: `${process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : ''}/p/${id}`
   });
 }
